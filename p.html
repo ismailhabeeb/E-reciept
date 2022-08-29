@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <tbody id="tcontent"></tbody>
+    <button onclick="add()">mmmm</button> -->
+    
+</body>
+</html>
+<script>
+//     function add() {
+//     const _name = document.getElementById('name')
+//     const code = document.getElementById('code')
+//     const tcontent = document.getElementById('tcontent');
+
+//     //TD
+//     const tdName = document.createElement('td')      
+//     const input = document.createElement('input')
+//     input.value = _name.value
+
+//     tdName.appendChild(input)
+
+//     //TD2
+//     const tdCode = document.createElement('td')
+//     tdCode.innerText = code.value;
+
+//     //TR
+//     const tr = document.createElement('tr')
+//     tr.appendChild(tdName)
+//     tr.appendChild(tdCode)
+//     tcontent.appendChild(tr)
+
+// }
+// let productArray =
+//         [
+//             { product: "Milo 450g", price: 1400.00 },
+//             { product: "Dano 500g", price: 1300.00 },
+//             { product: "Cocacola", price: 170.00 },
+//             { product: "Puffpuff", price: 395.00 },
+//             { product: "Peak 500g", price: 1800.00 },
+//             { product: "Minced pie", price: 279.00 },
+//             { product: "Yoghurt", price: 700.00 },
+//             { product: "Goodmama", price: 200.00 },
+//             { product: "Maltina", price: 250.00 }
+
+//         ]
+
+//     let item = document.getElementById("container")
+//     function repeat() {
+//         for (let i = 0; i <= productArray.length; i++) {
+//             item.innerHTML +=
+//                 `
+//                     <button class="d-block btn btn-light mt-1 w-100 text-start" onclick= "ChooseOne('${productArray[i].product}','${productArray[i].price}')" id= "displayOne">
+//                         <span>${productArray[i].product}</span>
+//                         <span class= "ms-5 ps-3"> $${productArray[i].price}.00</span>
+//                     </button>
+//                 `
+//                 document.getElementById("amount").value = productArray[i].price * document.getElementById("quantity").value
+//         }
+
+//     }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="code" placeholder="code">
+        <button onclick="Add()" style="padding: 10px;">ADD</button>
+        <button onclick="Add2()" style="padding: 10px;">ADD2</button>
+
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    code
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tcontent">
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    function Add2() {
+        const _name = document.getElementById("name")
+        const code = document.getElementById("code")
+        document.getElementById("tcontent").innerHTML += `
+        <tr>
+            <td>
+                <input type= "text" value= "${_name.value}" />
+            </td>
+            <td>${code.value}</td>
+        </tr>
+    `
+    console.log(code.value)
+    console.log(_name.value)
+
+
+    }
+    function Add() {
+    const _name = document.getElementById('name')
+    const code = document.getElementById('code')
+    const tcontent = document.getElementById('tcontent');
+    //TD
+    const tdName = document.createElement('td') 
+    
+    const input = document.createElement('input')
+    input.value = _name.value
+    tdName.appendChild(input)
+
+    //TD2
+    const tdCode = document.createElement('td')
+    tdCode.innerText = code.value;
+
+    //TR
+    const tr = document.createElement('tr')
+    tr.appendChild(tdName)
+    tr.appendChild(tdCode)
+    tcontent.appendChild(tr)
+
+}
+
+
+</script>
+//     function display(){
+    //         let tcontent = document.getElementById("tcontent")
+    //         tcontent.innerHTML = ""
+    //             productArray.map((value, index) => {    
+    //             tcontent.innerHTML +=
+    //             `
+    <!-- //                 <button class="mt-1  navbar container-fluid btn btn-primary text-start"  id= "displayOne">
+    //                     <span class="size" >${value.product}</span>
+    //                     <span class="size" id="ff"> ${value.price}</span>
+    //                     <input class="siz" type="number" id="me${index}" onkeyup="addu()">
+    //                     <input class="siz" type="number" name="" id="you${}" readonly>
+    //                 </button> -->
+    //             `
+    //             })
+    //     }
+    
+    // function addu() {
+    //     for (let index = 1; index < productArray.length; index += 1) {
+    //         console.log(index)
+    //         let you = document.getElementById(`ff${productArray[index].price}`).innerHTML
+    //         console.log(you)
+    //     let mult = document.getElementById(`me${productArray[index].id}`).value
+    //     document.getElementById(`you${productArray[index].id}`).value = Number(you) * Number(mult)
+    // }}
+    
+    // function total(){
+    //     addu()   
+    
+    //     document.getElementById(`result`).value = Number(document.getElementById(`you${productArray[1].id}}`).value) + Number(document.getElementById(`you${productArray[2].id}}`).value)+Number(document.getElementById(`you${productArray[3].id}}`).value) +Number(document.getElementById(`you${productArray[4].id}}`).value) +Number(document.getElementById(`you${productArray[5].id}}`).value)+Number(document.getElementById(`you${productArray[6].id}}`).value)
+    
+    //     }
+    
+    
+        
+    // function addNum(index){   
+    
+    // tcontent = document.getElementById(`tcontent`).innerHTML
+    // prod = productArray[index].product
+    // price = productArray[index].price
+    // quan = index
+    // Total = index
+    
+    // //span
+    // const tdmain = document.createElement('button') 
+    // const tdquan = document.createElement('span') 
+    // const tdtotal = document.createElement('span') 
+    
+    // const input = document.createElement('input')
+    // input.value = quan.value
+    // tdquan.appendChild(input)
+    
+    // const input = document.createElement('input')
+    // input.value = Total.value
+    // tdtotal.appendChild(input)
+    
+    
+    // //span2
+    // const tdCode = document.createElement('span')
+    // tdCode.innerText = code.value;
+    
+    // //TR
+    // const tr = document.createElement('button')
+    // tr.appendChild(tdName)
+    // tr.appendChild(tdCode)
+    // tcontent.appendChild(tr)
+    
+    // }

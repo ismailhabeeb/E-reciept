@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+    <div style=" width: 100%; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+        class="ps-5 btn-light">
+        <span class="display-1 fw-2">M</span>
+        <span style="margin-left: -25px;" class="btn-light h4">AHISH ENTERPRISES</span>
+    </div>
+
+    <main>
+        <section>
+            <!-- Button to Open the Modal -->
+            <button type="button" style="margin: -1.9px 0 0 -2px;" class="btn btn-primary W-75" data-bs-toggle="modal" data-bs-target="#myModal" onclick="addme()">
+              CLICK HERE FOR  PRODUCT LIST <>
+            </button>
+            <!-- The Modal -->
+            <div class="modal " id="myModal">
+                <div class="main modal-dialog modal-fullscreen-xxl-down ">
+                    <div class="modal-content p-0 " >
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">PRODUCT LIST & PRICE</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body  p-0" style="margin-left: -25px;">
+                            <ul id="list">
+                                <nav class="navbar container-fluid ">
+                                    <h5 class="" >PRODUCT</h5>
+                                    <h5>PRICE</h5>
+                                </nav>                               
+                            </ul>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="dis navbar ">
+            <h5 class="">PRODUCT</h5>
+            <h5>PRICE</h5>
+            <h5>QTY</h5>
+            <h5 class="">TOTAL</h5>
+        </nav>
+        <div id="tcontent" class="navbar  ">
+        </div>
+        
+    </main>
+    <div  class="navbar pay-div">
+        <div id="result-div" class="navbar p-0">
+            <button class="des btn btn-warning m-0" onclick="total()"   id="total">TOTAL</button>
+            <strike>N</strike>
+            <div id="result"  class="w-50"></div>
+        </div>
+        <button class="btn btn-success" onclick="next()" data-bs-toggle="modal" data-bs-target="#myModal2">Proceed to payment</button>
+    </div>
+
+</body>
+<div class="modal w-100 bg-dark " id="myModal2">
+    <div class="modal-dialog">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h1 class="offcanvas-title">
+                    <div style=" width: 100%; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+        class="ps-5">
+        <span class="display-1 fw-2">M</span>
+        <span style="margin-left: -25px;" class="btn-light h4">AHISH ENTERPRISES</span>
+    </div>
+                </h1>
+                <button type="button" class="btn-close mb-4" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="paymentForm" class="text-dark">
+                <div class="form-group m-2">
+                  <label for="email">Email Address</label>
+                  <input class="form-control" type="email" id="input3" required />
+                </div>
+                <div class="form-group m-2">
+                  <label for="amount">Amount</label>
+                  <input class="form-control" type="tel" id="amount" required />
+                </div>
+                <div class="form-group m-2">
+                  <label for="first-name">First Name</label>
+                  <input class="form-control" type="text" id="first-name" />
+                </div>
+                <div class="form-group m-2">
+                  <label for="last-name">Last Name</label>
+                  <input class="form-control" type="text" id="last-name" />
+                </div>
+                <div class="form-submit m-1">
+                  <button class="btn btn-success" type="submit" onclick="payWithPaystack()"> Pay </button>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>
+
+</html>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="product.js"></script>
